@@ -63,11 +63,25 @@
       border-radius:8px;
       padding:1rem;
       background:#fff;
+      margin-bottom: 1.5rem;
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+    .project-card h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
     .project-card a {
       color:#0077cc;
       text-decoration:none;
       font-weight:600;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
     }
     footer {
       background:#eef3f7;
@@ -309,23 +323,27 @@
       <div class="bar"><span>MongoDB</span><div class="progress"><div style="--level: 70%;"></div></div></div>
       <div class="bar"><span>PostgreSQL</span><div class="progress"><div style="--level: 75%;"></div></div></div>
       <div class="bar"><span>Pandas & NumPy</span><div class="progress"><div style="--level: 85%;"></div></div></div>
-      <div class="bar"><span>Git</span><div class="progress"><div style="--level: 80%;"></div></div></div>
     </div>
   </section>
 
   <section id="projects" class="section">
     <div class="content">
       <h2>Projects</h2>
+
       <div class="project-card">
-        <h3>Social Media Data ETL Pipeline</h3>
+        <img src="images/social-media-etl.png" alt="Social Media ETL Pipeline">
+        <h3><a href="https://github.com/Martin-7251/SocialMedia-ETL-Pipeline" target="_blank">Social Media Data ETL Pipeline</a></h3>
         <p>Built a complete ETL pipeline to extract, transform, and load social media data from MongoDB and MySQL into PostgreSQL. Automated workflows using Apache Airflow inside a Docker container.</p>
         <p><strong>Stack:</strong> Python, Docker, MongoDB, MySQL, PostgreSQL, Apache Airflow</p>
       </div>
+
       <div class="project-card">
-        <h3>Football Stadium Data Analysis</h3>
+        <img src="images/stadium-analysis.png" alt="Football Stadium Analysis">
+        <h3><a href="https://github.com/Martin-7251/Football-Stadium-Analysis" target="_blank">Football Stadium Data Analysis</a></h3>
         <p>Performed EDA on global football stadiums to explore trends in capacity and usage. Visualized insights using Python plotting libraries and shared results through GitHub.</p>
-        <p><strong>Stack:</strong> Python, Pandas, Seaborn, Matplotlib, Airflow, Azure</p>
+        <p><strong>Stack:</strong> Python, Pandas, Docker, Matplotlib, Airflow, Azure</p>
       </div>
+
     </div>
   </section>
 
