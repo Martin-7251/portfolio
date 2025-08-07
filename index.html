@@ -342,20 +342,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <nav>
-  <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+  
 
   <section id="about" class="section">
     <div class="content">
@@ -517,5 +504,13 @@
   <footer>
     <p>&copy; 2025 Martin Kamau. All rights reserved.</p>
   </footer>
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
