@@ -9,8 +9,23 @@
     body { margin:0; font-family: 'Inter', sans-serif; color:#333; background:#f8f9fa; }
     header, footer, .section { text-align: center; padding: 2rem 1rem; }
     header { background: #eef3f7; }
-    nav { display: flex; justify-content: center; gap:2rem; background:#fff; position:sticky; top:0; z-index:100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    nav a { color:#0077cc; text-decoration:none; font-weight:600; padding: 1rem; display: inline-block; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap:2rem;
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    nav a {
+      color:#0077cc;
+      text-decoration:none;
+      font-weight:600;
+      padding: 1rem;
+      display: inline-block;
+    }
     nav a:hover { text-decoration: underline; }
     .profile-pic {
       width: 220px;
@@ -21,13 +36,89 @@
       border: 4px solid #0077cc;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
-    .content { max-width: 800px; margin: auto; padding:1rem; text-align: left; }
-    .section h2 { font-size: 1.8rem; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; margin-top: 2rem; }
-    .skills-list, .projects-list { list-style:none; padding:0; display:grid; gap:1.5rem; }
-    .skills-list { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-    .project-card { border:1px solid #ddd; border-radius:8px; padding:1rem; background:#fff; }
-    .project-card a { color:#0077cc; text-decoration:none; font-weight:600; }
-    footer { background:#eef3f7; font-size:0.9rem; }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding:1rem;
+      text-align: left;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .skills-list, .projects-list {
+      list-style:none;
+      padding:0;
+      display:grid;
+      gap:1.5rem;
+    }
+    .skills-list {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .project-card {
+      border:1px solid #ddd;
+      border-radius:8px;
+      padding:1rem;
+      background:#fff;
+    }
+    .project-card a {
+      color:#0077cc;
+      text-decoration:none;
+      font-weight:600;
+    }
+    footer {
+      background:#eef3f7;
+      font-size:0.9rem;
+    }
+
+    .education-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .edu-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 240px;
+      height: 240px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .edu-card:hover {
+      transform: scale(1.05);
+    }
+    .edu-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+    .edu-card .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 119, 204, 0.9);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-align: center;
+      padding: 1rem;
+    }
+    .edu-card:hover .overlay {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -54,10 +145,20 @@
   </section>
 
   <section id="education" class="section">
-    <div class="content">
-      <h2>Education</h2>
-      <p><strong>Bachelor of Science in Mechatronic Engineering</strong><br>Jomo Kenyatta University of Agriculture and Technology – Nairobi, June 2023</p>
-      <p><strong>Certifications:</strong><br>Associate Data Engineer – DataCamp<br>Career Essentials in Data Analysis – Microsoft & LinkedIn</p>
+    <h2>Education</h2>
+    <div class="education-cards">
+      <div class="edu-card">
+        <img src="jkuat-logo.png" alt="JKUAT Logo">
+        <div class="overlay">BSc Mechatronic Engineering</div>
+      </div>
+      <div class="edu-card">
+        <img src="datacamp-logo.jpg" alt="DataCamp Logo">
+        <div class="overlay">Associate Data Engineer Certificate</div>
+      </div>
+      <div class="edu-card">
+        <img src="linkedin-logo.jpg" alt="LinkedIn/Microsoft Logo">
+        <div class="overlay">Career Essentials in Data Analysis</div>
+      </div>
     </div>
   </section>
 
