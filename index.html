@@ -1,110 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Martin Kamau | Data Engineer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Kamau | Data Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #fdfdfd;
-      color: #333;
+    body { margin:0; font-family: 'Inter', sans-serif; color:#333; background:#f8f9fa; }
+    header, footer, .section { text-align: center; padding: 2rem 1rem; }
+    header { background: #eef3f7; }
+    nav { display: flex; justify-content: center; gap:2rem; background:#fff; position:sticky; top:0; z-index:100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    nav a { color:#0077cc; text-decoration:none; font-weight:600; padding: 1rem; display: inline-block; }
+    nav a:hover { text-decoration: underline; }
+    .profile-pic {
+      width: 160px; height: 160px; object-fit: cover;
+      border-radius: 50%; margin-top: 1rem; border: 4px solid #0077cc;
     }
-    header {
-      background-color: #0a192f;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    main {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-    section {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: white;
-    } 
-    
-    
-    h2, h3 {
-      color: #111827;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #0288d1;
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #e5e7eb;
-      color: #333;
-    }
+    .content { max-width: 800px; margin: auto; padding:1rem; text-align: left; }
+    .section h2 { font-size: 1.8rem; border-bottom: 2px solid #ccc; padding-bottom: 0.5rem; margin-top: 2rem; }
+    .skills-list, .projects-list { list-style:none; padding:0; display:grid; gap:1.5rem; }
+    .skills-list { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    .project-card { border:1px solid #ddd; border-radius:8px; padding:1rem; background:#fff; }
+    .project-card a { color:#0077cc; text-decoration:none; font-weight:600; }
+    footer { background:#eef3f7; font-size:0.9rem; }
   </style>
 </head>
 <body>
   <header>
+    <img src="Martin's Photo.jpg" alt="Martin Kamau" class="profile-pic">
     <h1>Martin Kamau</h1>
     <p>Data Engineer | ETL | Python | SQL | Airflow | Docker</p>
   </header>
-  <main>
-    <section>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="section">
+    <div class="content">
       <h2>About Me</h2>
-      <p>Hi, I’m a Data Engineer with a strong background in data transformation, pipeline orchestration, and infrastructure automation. I specialize in designing scalable ETL/ELT solutions, managing both structured and unstructured data, and integrating data across systems to drive analytics and reporting.</p>
-    </section>
+      <p>I am a driven Data Engineer and Analyst with over 2 years of experience designing and implementing scalable data solutions across diverse domains. I specialize in building ETL pipelines, automating workflows, and transforming complex datasets into actionable insights. My work spans from developing data pipelines using tools like Python, SQL, Airflow, and Docker, to analyzing cloud-based system data to support business decisions.</p>
+    </div>
+  </section>
 
-    <section>
+  <section id="education" class="section">
+    <div class="content">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Mechatronic Engineering</strong><br>Jomo Kenyatta University of Agriculture and Technology – Nairobi, June 2023</p>
+      <p><strong>Certifications:</strong><br>Associate Data Engineer – DataCamp<br>Career Essentials in Data Analysis – Microsoft & LinkedIn</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="content">
+      <h2>Work Experience</h2>
+      <p><strong>System & Data Analyst – CHAJI Services Limited</strong><br>Nairobi, Kenya | Dec 2023 – Present</p>
+      <ul>
+        <li>Managed and analyzed data from cloud-based e-mobility systems collecting real-time EV charging data.</li>
+        <li>Extracted, cleaned, and transformed high-volume transactional data using SQL and Python.</li>
+        <li>Built dashboards in Power BI for tracking CO₂ reduction, job creation, and station usage metrics.</li>
+        <li>Designed field studies and aligned data products with strategic business goals.</li>
+      </ul>
+      <p><strong>Business Analyst – Payopesa</strong><br>Nairobi, Kenya | Mar 2023 – Oct 2023</p>
+      <ul>
+        <li>Performed QA and managed fintech product datasets.</li>
+        <li>Built dashboards and reports to uncover growth opportunities.</li>
+        <li>Led training and collaborated on KPI alignment with strategic teams.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="content">
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming & Scripting:</strong> Python, SQL, Bash</li>
-        <li><strong>Data Engineering:</strong> ETL/ELT, Apache Airflow, dbt, Docker</li>
-        <li><strong>Storage:</strong> PostgreSQL, MySQL, MongoDB, Snowflake</li>
-        <li><strong>Processing:</strong> Pandas, NumPy, Feature Engineering</li>
-        <li><strong>Orchestration:</strong> Airflow, GitHub Actions</li>
-        <li><strong>Soft Skills:</strong> Communication, Collaboration, Agile workflows</li>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Power BI</li>
+        <li>Apache Airflow</li>
+        <li>Docker</li>
+        <li>MongoDB</li>
+        <li>MySQL</li>
+        <li>PostgreSQL</li>
+        <li>Pandas & NumPy</li>
+        <li>Data Cleaning</li>
+        <li>Git</li>
+        <li>Bash</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <section id="projects" class="section">
+    <div class="content">
       <h2>Projects</h2>
-      <h3><a href="https://github.com/Martin-7251/social-media-etl">Social Media ETL Pipeline</a></h3>
-      <p>Built a full ETL pipeline that extracts social media interaction data from various sources, transforms it using Pandas/NumPy, and loads it into PostgreSQL. Orchestrated with Airflow and containerized with Docker.</p>
+      <div class="project-card">
+        <h3>Social Media Data ETL Pipeline</h3>
+        <p>Built a complete ETL pipeline to extract, transform, and load social media data from MongoDB and MySQL into PostgreSQL. Automated workflows using Apache Airflow inside a Docker container.</p>
+        <p><strong>Stack:</strong> Python, Docker, MongoDB, MySQL, PostgreSQL, Apache Airflow</p>
+      </div>
+      <div class="project-card">
+        <h3>Football Stadium Data Analysis</h3>
+        <p>Performed EDA on global football stadiums to explore trends in capacity and usage. Visualized insights using Python plotting libraries and shared results through GitHub.</p>
+        <p><strong>Stack:</strong> Python, Pandas, Seaborn, Matplotlib, Airflow, Azure</p>
+      </div>
+    </div>
+  </section>
 
-      <h3><a href="https://github.com/Martin-7251/football-stadium-analysis">Football Stadium Data Analysis</a></h3>
-      <p>Performed a deep-dive analysis on football stadium data to uncover trends in capacity, attendance, and geographic distribution using Python and data visualization libraries.</p>
-    </section>
-
-    <section>
-      <h2>Education & Certifications</h2>
-      <ul>
-        <li>BSc Mechatronic Engineering | June 2023</li>
-        <li>Data Engineering - Everything Data | July 2025</li>       
-      </ul>
-    </section>
-
-    <section>
+  <section id="contact" class="section">
+    <div class="content">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:martinkamau72@gmail.com">martinkamau72@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/martinkamau29/">linkedin.com/in/martinkamau29/</a></p>
-      <p>GitHub: <a href="https://github.com/Martin-7251">github.com/Martin-7251</a></p>
-    </section>
-  </main>
+      <p>Phone: +254707525775</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/martinkamau29" target="_blank">martinkamau29</a></p>
+      <p>GitHub: <a href="https://github.com/Martin-7251" target="_blank">Martin-7251</a></p>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 Martin Kamau. All rights reserved.</p>
   </footer>
