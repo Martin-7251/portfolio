@@ -81,43 +81,45 @@
       gap: 1.5rem;
       margin-top: 2rem;
     }
-    .edu-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+    .flip-card {
+      background: transparent;
       width: 240px;
       height: 240px;
+      perspective: 1000px;
+    }
+    .flip-card-inner {
       position: relative;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
     }
-    .edu-card:hover {
-      transform: scale(1.05);
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
     }
-    .edu-card img {
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+    }
+    .flip-card-front img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 1rem;
       background: #f9f9f9;
     }
-    .edu-card .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+    .flip-card-back {
       background: rgba(0, 119, 204, 0.9);
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      text-align: center;
       padding: 1rem;
-    }
-    .edu-card:hover .overlay {
-      opacity: 1;
+      transform: rotateY(180deg);
+      text-align: center;
     }
   </style>
 </head>
@@ -147,17 +149,35 @@
   <section id="education" class="section">
     <h2>Education</h2>
     <div class="education-cards">
-      <div class="edu-card">
-        <img src="jkuat-logo.png" alt="JKUAT Logo">
-        <div class="overlay">BSc Mechatronic Engineering</div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="jkuat-logo.png" alt="JKUAT Logo">
+          </div>
+          <div class="flip-card-back">
+            <p>BSc Mechatronic Engineering</p>
+          </div>
+        </div>
       </div>
-      <div class="edu-card">
-        <img src="datacamp-logo.jpg" alt="DataCamp Logo">
-        <div class="overlay">Associate Data Engineer Certificate</div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="datacamp-logo.jpg" alt="DataCamp Logo">
+          </div>
+          <div class="flip-card-back">
+            <p>Associate Data Engineer Certificate</p>
+          </div>
+        </div>
       </div>
-      <div class="edu-card">
-        <img src="linkedin-logo.jpg" alt="LinkedIn/Microsoft Logo">
-        <div class="overlay">Career Essentials in Data Analysis</div>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="linkedin-logo.jpg" alt="LinkedIn Logo">
+          </div>
+          <div class="flip-card-back">
+            <p>Career Essentials in Data Analysis</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
