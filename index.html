@@ -118,9 +118,16 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-    .project-card h3 {
-      margin-top: 0;
-    }
+    .project-card h3 a {
+      color: #0077cc; /* Theme blue */
+      text-decoration: none; /* No underline initially */
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+    .project-card h3 a:hover {
+      color: #005fa3; /* Darker blue on hover */
+      text-decoration: underline; /* Underline to signal click */
+}
     }
     footer {
       background:#eef3f7;
