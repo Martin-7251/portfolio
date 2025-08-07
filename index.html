@@ -205,6 +205,23 @@
       from { width: 0; }
       to { width: var(--level); }
     }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact-icons a {
+      font-size: 2rem;
+      color: #0077cc;
+      transition: transform 0.3s ease, color 0.3s ease;
+}
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+      color: #005fa3;
+}
   </style>
 </head>
 <body>
@@ -360,14 +377,24 @@
 </section>
 
   <section id="contact" class="section">
-    <div class="content">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:martinkamau72@gmail.com">martinkamau72@gmail.com</a></p>
-      <p>Phone: +254707525775</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/martinkamau29" target="_blank">martinkamau29</a></p>
-      <p>GitHub: <a href="https://github.com/Martin-7251" target="_blank">Martin-7251</a></p>
+  <div class="content">
+    <h2>Contact</h2>
+    <p style="text-align:center; font-size:1.1rem; margin-bottom:1rem;">
+      💬 Let’s connect! Whether you have a question, an opportunity, or just want to say hi — I’m always happy to talk about data, tech, and new ideas.
+    </p>
+    <div class="contact-icons">
+      <a href="mailto:martinkamau72@gmail.com" target="_blank" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/martinkamau29" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Martin-7251" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2025 Martin Kamau. All rights reserved.</p>
