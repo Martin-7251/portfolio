@@ -224,6 +224,60 @@
       transform: scale(1.2);
       color: #005fa3;
 }
+/* === Mobile Responsive Section === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 0;
+  }
+  nav a {
+    padding: 0.8rem;
+    border-top: 1px solid #eee;
+  }
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+  .content {
+    padding: 0.5rem;
+  }
+  .education-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .project-card img {
+    max-height: 200px;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header, footer, .section {
+    padding: 1.5rem 0.5rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+  .flip-card {
+    width: 90%;
+    height: auto;
+  }
+  .flip-card-front img {
+    width: 50px;
+  }
+  .skills-section .bar span {
+    font-size: 0.9rem;
+  }
+}    
   </style>
 </head>
 <body>
