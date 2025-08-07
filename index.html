@@ -59,29 +59,28 @@
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
     .project-card {
-      border:1px solid #ddd;
-      border-radius:8px;
-      padding:1rem;
-      background:#fff;
-      margin-bottom: 1.5rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      background: #fff;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
     }
     .project-card img {
       width: 100%;
       height: auto;
+      max-height: 300px;
+      object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     .project-card h3 {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
+      margin-top: 0;
     }
-    .project-card a {
-      color:#0077cc;
-      text-decoration:none;
-      font-weight:600;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
     }
     footer {
       background:#eef3f7;
@@ -327,25 +326,38 @@
   </section>
 
   <section id="projects" class="section">
-    <div class="content">
-      <h2>Projects</h2>
+  <div class="content">
+    <h2>Projects</h2>
 
-      <div class="project-card">
-        <img src="etl-pipeline.jpeg" alt="Social Media ETL Pipeline">
-        <h3><a href="https://github.com/Martin-7251/social-media-etl" target="_blank">Social Media Data ETL Pipeline</a></h3>
-        <p>Built a complete ETL pipeline to extract, transform, and load social media data from MongoDB and MySQL into PostgreSQL. Automated workflows using Apache Airflow inside a Docker container.</p>
-        <p><strong>Stack:</strong> Python, Docker, MongoDB, MySQL, PostgreSQL, Apache Airflow</p>
-      </div>
-
-      <div class="project-card">
-        <img src="stadium-analysis.jpeg" alt="Football Stadium Analysis">
-        <h3><a href="https://github.com/Martin-7251/Football-Stadium-Analysis" target="_blank">Football Stadium Data Analysis</a></h3>
-        <p>Performed EDA on global football stadiums to explore trends in capacity and usage. Visualized insights using Power BI and shared results through GitHub.</p>
-        <p><strong>Stack:</strong> Python, Pandas, Docker, Matplotlib, Airflow, Azure</p>
-      </div>
-
+    <div class="project-card">
+      <img src="etl-pipeline.jpeg" alt="ETL Pipeline Project">
+      <h3>
+        <a href="https://github.com/Martin-7251/social-media-etl" target="_blank" style="color:#0077cc; text-decoration:none;">
+          Social Media Data ETL Pipeline
+        </a>
+      </h3>
+      <p>
+        Built a complete ETL pipeline to extract, transform, and load social media data from MongoDB and MySQL into PostgreSQL. 
+        Automated workflows using Apache Airflow inside a Docker container.
+      </p>
+      <p><strong>Stack:</strong> Python, Docker, MongoDB, MySQL, PostgreSQL, Apache Airflow</p>
     </div>
-  </section>
+
+    <div class="project-card">
+      <img src="stadium-analysis.jpeg" alt="Stadium Analysis Project">
+      <h3>
+        <a href="https://github.com/Martin-7251/Football-Stadium-Analysis" target="_blank" style="color:#0077cc; text-decoration:none;">
+          Football Stadium Data Analysis
+        </a>
+      </h3>
+      <p>
+        Performed EDA on global football stadiums to explore trends in capacity and usage. 
+        Visualized insights using Python plotting libraries and shared results through GitHub.
+      </p>
+      <p><strong>Stack:</strong> Python, Pandas, Docker, Matplotlib, Airflow, Azure</p>
+    </div>
+  </div>
+</section>
 
   <section id="contact" class="section">
     <div class="content">
