@@ -510,12 +510,21 @@
     <p>&copy; 2025 Martin Kamau. All rights reserved.</p>
   </footer>
   <script>
-    const menuToggle = document.getElementById('mobile-menu');
-    const nav = document.querySelector('nav');
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('nav a');
 
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
+  // Toggle menu when burger icon is clicked
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
     });
+  });
   </script>
 </body>
 </html>
