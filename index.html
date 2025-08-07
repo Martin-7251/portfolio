@@ -76,50 +76,25 @@
 
     .education-cards {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
+      flex-direction: column;
+      gap: 2rem;
       margin-top: 2rem;
     }
-    .flip-card {
-      background: transparent;
-      width: 240px;
-      height: 240px;
-      perspective: 1000px;
-    }
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-    }
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-    .flip-card-front,
-    .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
+    .education-item {
+      background: #fff;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
     }
-    .flip-card-front img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: #f9f9f9;
+    .education-item h3 {
+      margin: 0;
+      font-size: 1.2rem;
     }
-    .flip-card-back {
-      background: rgba(0, 119, 204, 0.9);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      transform: rotateY(180deg);
-      text-align: center;
+    .education-item p {
+      margin: 0.3rem 0;
+    }
+    .education-item ul {
+      margin: 0.5rem 0 0 1rem;
     }
   </style>
 </head>
@@ -147,37 +122,35 @@
   </section>
 
   <section id="education" class="section">
-    <h2>Education</h2>
+    <h2>🎓 Education</h2>
     <div class="education-cards">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="jkuat-logo.png" alt="JKUAT Logo">
-          </div>
-          <div class="flip-card-back">
-            <p>BSc Mechatronic Engineering</p>
-          </div>
-        </div>
+      <div class="education-item">
+        <h3><strong>BSc in Mechatronic Engineering</strong> – <em>2023</em></h3>
+        <p><strong>Institution:</strong> Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+        <p><strong>Summary:</strong> Built a strong foundation in engineering systems, with special focus on controls, data acquisition, and software programming.</p>
+        <ul>
+          <li><strong>Relevant Coursework:</strong> Control Systems, Embedded Systems, Applied Programming</li>
+          <li><strong>Thesis:</strong> Design and Analysis of a Solar-Powered EV Charging System</li>
+          <li><strong>Achievements:</strong> Graduated with Honors, Robotics Club Lead</li>
+        </ul>
       </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="datacamp-logo.jpg" alt="DataCamp Logo">
-          </div>
-          <div class="flip-card-back">
-            <p>Associate Data Engineer Certificate</p>
-          </div>
-        </div>
+      <div class="education-item">
+        <h3><strong>Associate Data Engineer Certificate</strong> – <em>2025</em></h3>
+        <p><strong>Institution:</strong> DataCamp</p>
+        <p><strong>Summary:</strong> Completed an end-to-end learning track in data engineering with a focus on pipeline design, ETL workflows, and data modeling.</p>
+        <ul>
+          <li><strong>Tools & Topics:</strong> Python, Airflow, SQL, Data Warehousing</li>
+          <li><strong>Certification Link:</strong> <a href="#">View Certificate</a></li>
+        </ul>
       </div>
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="linkedin-logo.jpg" alt="LinkedIn Logo">
-          </div>
-          <div class="flip-card-back">
-            <p>Career Essentials in Data Analysis</p>
-          </div>
-        </div>
+      <div class="education-item">
+        <h3><strong>Career Essentials in Data Analysis</strong> – <em>2025</em></h3>
+        <p><strong>Institution:</strong> Microsoft & LinkedIn Learning</p>
+        <p><strong>Summary:</strong> Developed core analytical skills with hands-on Power BI projects and foundational business analysis training.</p>
+        <ul>
+          <li><strong>Topics:</strong> Power BI, Data Cleaning, Exploratory Data Analysis</li>
+          <li><strong>Certification Link:</strong> <a href="#">View Certificate</a></li>
+        </ul>
       </div>
     </div>
   </section>
